@@ -54,13 +54,15 @@ const Home: NextPage = () => {
           onClick={getPlateData}
           className="rounded-2 m-2 flex w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-blue-200 bg-white p-2  shadow-lg hover:bg-blue-500 hover:text-white"
         />
-        <img
-          width={400}
-          height={300}
-          src={displayImage}
-          alt="preview"
-          className="m-4 rounded-xl shadow-2xl"
-        />
+        {displayImage && (
+          <img
+            width={400}
+            height={300}
+            src={displayImage}
+            alt="preview"
+            className="m-4 rounded-xl shadow-2xl"
+          />
+        )}
         {results &&
           results.results.map((result: any, index: number) => (
             <div
